@@ -1,0 +1,111 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register Page</title>
+<style type="text/css">
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+    h1 {
+        color: Purple;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    h2 {
+        color: blue;
+        margin-bottom: 20px;
+    }
+    form {
+        display: grid;
+        grid-template-columns: max-content 200px;
+        gap: 10px 10px;
+        padding: 20px 30px;
+        border: 1px solid;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px black;
+        align-items: center;
+    }
+    form label {
+        text-align: right;
+    }
+    form input[type="number"],
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="confirm_password"],
+    form input[type="date"],
+    form select {
+        width: 200px;
+        padding: 6px;
+        border: 1px solid;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    form input[type="submit"] {
+        grid-column: span 2;
+        background-color: green;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .login-a{
+        grid-column: span 2;
+        text-decoration: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .login-a a {
+        text-decoration: none;
+        color: blue;
+    }
+</style>
+</head>
+<body>
+    <h1>Pentagon Space</h1>
+    <h2>Student Registration</h2>
+    
+    
+    <form action="signup" method="post">
+        <label>Id:</label>
+        <input type="number" name="id">
+        <label>Name:</label>
+        <input type="text" name="name">
+        <label>Phone:</label>
+        <input type="number" name="phone">
+        <label>E-mail:</label>
+        <input type="text" name="mail">
+        <label>Branch:</label>
+        <select name="branch" required>
+            <option value=" ">--Select the Branch--</option>
+            <option value="cse">CSE</option>
+            <option value="ece">ECE</option>
+            <option value="civil">CIVIL</option>
+            <option value="mech">MECH</option>
+            <option value="eee">EEE</option>
+            <option value="ise">ISE</option>
+        </select>
+        <label>Location:</label>
+        <input type="text" name="loc">
+        <label>Password:</label>
+        <input type="password" name="password">
+        <label>ConfirmPassword</label>
+        <input type="password" name="confirmPassword">
+        <label>Date:</label>
+        <input type="date" name="date">
+        <input type="submit" value="SignUp">
+        <div class="login-a">
+        Already have an account?<a href="login.html"> Login</a>
+        </div>
+    </form>
+</body>
+</html>
